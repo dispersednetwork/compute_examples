@@ -18,6 +18,19 @@ else
 	chmod 600 ~/.ssh/authorized_keys
 fi
 
+if [[ -z "${BASIC_AUTH}" ]]; then
+	echo "No BASIC_AUTH set, not password protecting nginx"
+else
+	echo "Writing basic auth"
+	echo -e $BASIC_AUTH > /etc/nginx/htpasswd
+	TEMP_SED=$(sed 's/^##UNCOMMENT//' /etc/nginx/nginx.conf)
+	echo "$TEMP_SED" > /etc/nginx/nginx.conf
+fi
+
+echo "Starting nginx"
+/usr/bin/sudo /usr/sbin/nginx &
+
+
 python3 /opt/zerworker/ComfyUI/main.py --listen
 
 

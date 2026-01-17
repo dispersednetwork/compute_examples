@@ -11,5 +11,6 @@ Create the directories `models`, `extensions` and `workflows`
 
 `workflows/` - copied to `ComfyUI/user/default/workflows/`
 
+To add HTTP basic auth use BASIC_AUTH env var with a user:hash htpasswd string.
 
-Listens on 8188
+Listens on port 5000
