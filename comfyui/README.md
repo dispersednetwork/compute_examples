@@ -1,4 +1,4 @@
-# Zernet ComfyUI
+# Compute ComfyUI
 
 Create the directories `models`, `extensions` and `workflows`
 
