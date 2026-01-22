@@ -1,4 +1,4 @@
-# Zernet Base
+# Compute Base
 
 A simple base image that creates a listening SSH server.
 
