@@ -4,4 +4,4 @@ https://hub.docker.com/r/unsloth/unsloth
 
 https://github.com/unslothai/unsloth
 
-Creates `zeruser`, and wraps the Unsloth entry-point to set it up.
+Wraps the entrypoint to allow for key to be passed in as `SSH_PUBKEY`
