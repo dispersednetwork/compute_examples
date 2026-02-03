@@ -2,7 +2,7 @@
 
 A minimal Dockerfile and entrypoint wrapper for the official Unsloth image, adapted for use on Render Compute.
 
-This wrapper allows the SSH key to be passed in as `SSH_PUBKEY` (used by OTOY Compute) instead of `SSH_KEY` (expected by Unsloth).
+This wrapper allows the SSH key to be passed in as `SSH_PUBKEY` (used by Render Compute) instead of `SSH_KEY` (expected by Unsloth).
 
 **SSH user:** `unsloth`
 
