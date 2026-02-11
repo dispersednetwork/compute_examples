@@ -31,7 +31,7 @@ echo "Starting nginx"
 /usr/bin/sudo /usr/sbin/nginx &
 
 
-python3 /opt/zerworker/ComfyUI/main.py --listen
+python3 /opt/dispersedworker/ComfyUI/main.py --listen
 
 
 wait -n
