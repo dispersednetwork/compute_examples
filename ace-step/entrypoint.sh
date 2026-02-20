@@ -18,6 +18,16 @@ else
 	chmod 600 ~/.ssh/authorized_keys
 fi
 
+if [[ -z "${ACESTEPUSER}" ]]; then
+	echo "No ACESTEPUSER set. Exiting..."
+	exit 1
+fi
+
+if [[ -z "${ACESTEPPASSWORD}" ]]; then
+	echo "No ACESTEPPASSWORD set. Exiting..."
+	exit 1
+fi
+
 uv run acestep-download
 uv run acestep --server-name 0.0.0.0 --auth-username $ACESTEPUSER --auth-password $ACESTEPPASSWORD
 

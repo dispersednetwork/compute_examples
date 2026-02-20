@@ -29,8 +29,8 @@ Access the UI at `http://localhost:7860`
 | Variable | Description |
 |----------|-------------|
 | `SSH_PUBKEY` | SSH public key for container access |
-| `ACESTEPUSER` | Username for web UI (optional) |
-| `ACESTEPPASSWORD` | Password for web UI (optional) |
+| `ACESTEPUSER` | Username for web UI |
+| `ACESTEPPASSWORD` | Password for web UI |
 
 ## GPU Support
 
