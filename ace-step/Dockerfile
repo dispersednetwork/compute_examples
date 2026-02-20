@@ -1,6 +1,7 @@
 FROM ubuntu:24.04
 
 EXPOSE 22
+EXPOSE 7860
 
 RUN apt-get update && \
 	apt-get upgrade -y && \
