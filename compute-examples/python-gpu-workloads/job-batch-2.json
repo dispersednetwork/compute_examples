@@ -1,0 +1,35 @@
+{
+    "task": "BATCH",
+    "title": "S3 Script Runner - User-supplied batch workload",
+    "description": "Downloads a Python script from S3 and runs it as a GPU batch job, uploading results back to S3",
+    "cpu_count": 2,
+    "gpu_count": 1,
+    "min_vram_gb": 13,
+    "min_storage_gb": 20,
+    "max_timeout_run_ms": 7200000,
+    "max_timeout_assign_ms": 300000,
+    "max_timeout_start_ms": 300000,
+    "max_node_count": 1,
+    "max_retry_count": 0,
+    "parameters": {
+        "type": "docker",
+        "parameters": {
+            "image": "",
+            "tag": "",
+            "host": "",
+            "user": "",
+            "secret": "",
+            "sshkey": "",
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+                "S3_BUCKET": "",
+                "BATCH_SCRIPT_KEY": "",
+                "BATCH_RESULTS_KEY": "",
+                "AWS_ACCESS_KEY_ID": "",
+                "AWS_SECRET_ACCESS_KEY": "",
+                "AWS_DEFAULT_REGION": "us-east-1"
+            },
+            "volumes": []
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "task": "PERSISTENT",
+    "title": "GPU Stress Test - FP16/BF16 Matmul, Attention, Transformer, Bandwidth",
+    "description": "Hard GPU stress test: sustained FP16/BF16 matmul, scaled dot-product attention, 128-layer transformer forward pass, and memory bandwidth",
+    "cpu_count": 2,
+    "gpu_count": 1,
+    "min_vram_gb": 13,
+    "min_storage_gb": 20,
+    "max_timeout_run_ms": null,
+    "max_timeout_assign_ms": 300000,
+    "max_timeout_start_ms": 300000,
+    "max_node_count": 1,
+    "max_retry_count": 0,
+    "parameters": {
+        "type": "docker",
+        "parameters": {
+            "image": "",
+            "tag": "",
+            "host": "",
+            "user": "",
+            "secret": "",
+            "sshkey": "",
+            "allowed_ips": [
+                "0.0.0.0/0"
+            ],
+            "ports": [
+                22,
+                8080
+            ],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0"
+            },
+            "volumes": []
+        }
+    }
+}

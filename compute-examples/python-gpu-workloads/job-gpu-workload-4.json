@@ -1,0 +1,40 @@
+{
+    "task": "PERSISTENT",
+    "title": "GPT Training Benchmark - Small Transformer + GitLab Model Registry Upload",
+    "description": "Trains a small GPT-style transformer for 500 steps on synthetic data, saves checkpoint, and uploads to GitLab Package Registry and Model Registry",
+    "cpu_count": 2,
+    "gpu_count": 1,
+    "min_vram_gb": 13,
+    "min_storage_gb": 20,
+    "max_timeout_run_ms": null,
+    "max_timeout_assign_ms": 300000,
+    "max_timeout_start_ms": 300000,
+    "max_node_count": 1,
+    "max_retry_count": 0,
+    "parameters": {
+        "type": "docker",
+        "parameters": {
+            "image": "",
+            "tag": "",
+            "host": "",
+            "user": "",
+            "secret": "",
+            "sshkey": "",
+            "allowed_ips": [
+                "0.0.0.0/0"
+            ],
+            "ports": [
+                22,
+                8080
+            ],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+                "GITLAB_TOKEN": "",
+                "GITLAB_PROJECT_ID": "",
+                "GITLAB_HOST": "",
+                "GITLAB_NAMESPACE": ""
+            },
+            "volumes": []
+        }
+    }
+}

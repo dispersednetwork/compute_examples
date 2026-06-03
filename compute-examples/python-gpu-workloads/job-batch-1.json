@@ -1,0 +1,33 @@
+{
+    "task": "BATCH",
+    "title": "GPU Benchmark - FP16, Memory Bandwidth, MLP Forward Pass",
+    "description": "FP16 tensor core throughput, memory bandwidth, and MLP forward pass latency benchmark",
+    "cpu_count": 2,
+    "gpu_count": 1,
+    "min_vram_gb": 13,
+    "min_storage_gb": 20,
+    "max_timeout_run_ms": 7200000,
+    "max_timeout_assign_ms": 300000,
+    "max_timeout_start_ms": 300000,
+    "max_node_count": 1,
+    "max_retry_count": 0,
+    "parameters": {
+        "type": "docker",
+        "parameters": {
+            "image": "",
+            "tag": "",
+            "host": "",
+            "user": "",
+            "secret": "",
+            "sshkey": "",
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+                "S3_BUCKET": "",
+                "AWS_ACCESS_KEY_ID": "",
+                "AWS_SECRET_ACCESS_KEY": "",
+                "AWS_DEFAULT_REGION": "us-east-1"
+            },
+            "volumes": []
+        }
+    }
+}
