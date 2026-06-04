@@ -1,0 +1,15 @@
+FROM dispersednetwork/pytorch-pytorch:2.7.1-cuda12.8-cudnn9-runtime
+
+USER root
+
+COPY --chown=duser:duser requirements.txt /requirements.txt
+RUN pip install --no-cache-dir -r /requirements.txt
+
+COPY --chown=duser:duser --chmod=755 entrypoint-batch.sh /entrypoint-batch.sh
+
+RUN mkdir -p /app && chown duser:duser /app
+COPY --chown=duser:duser --chmod=644 batch-benchmark.py /app/benchmark.py
+
+USER duser
+
+ENTRYPOINT ["/entrypoint-batch.sh"]
