@@ -9,6 +9,7 @@ Examples and Docker images for running workloads on [Dispersed Compute](https://
 | `docker-images/base/` | Minimal SSH server base image (`duser` account) | [README](docker-images/base/README.md) |
 | `docker-images/comfyui/` | Extensible ComfyUI image with model/extension/workflow volume mounts | [README](docker-images/comfyui/README.md) |
 | `docker-images/unsloth/` | Unsloth LLM fine-tuning image adapted for Dispersed (`SSH_PUBKEY` passthrough) | [README](docker-images/unsloth/README.md) |
+| `docker-images/llama.cpp/` | Llama.cpp image adapted for Dispersed (`SSH_PUBKEY` passthrough) | [README](docker-images/llama.cpp/README.md) |
 
 ## Compute examples
 
