@@ -1,0 +1,3 @@
+duser ALL = NOPASSWD: /usr/sbin/sshd
+duser ALL = NOPASSWD: /usr/sbin/nginx
+duser ALL = NOPASSWD: /usr/sbin/dpkg-reconfigure openssh-server
